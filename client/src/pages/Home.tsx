@@ -1,86 +1,101 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      {/* HERO */}
-      <section className="container mx-auto px-6 py-24 text-center">
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
-          Lubdan
-        </h1>
+    <div
+      className="min-h-screen text-foreground"
+      style={{
+        backgroundImage: "url(/images/IMG_2903.webp)", // FUNDO REAL
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* Overlay */}
+      <div className="min-h-screen bg-black/55 backdrop-blur-[1px]">
 
-        <p className="text-xl max-w-2xl mx-auto text-muted-foreground mb-10">
-          A next-generation decentralized ecosystem built for transparency,
-          scalability, and long-term value.
-        </p>
+        {/* HERO */}
+        <section className="container mx-auto px-6 py-20 grid md:grid-cols-2 gap-14 items-center">
+          
+          {/* Texto */}
+          <div>
+            <h1 className="text-4xl md:text-6xl font-extrabold mb-6 text-yellow-400">
+              Where Strategy Meets Luck
+            </h1>
 
-        <div className="flex justify-center gap-4 flex-wrap">
-          <Button size="lg">Join Presale</Button>
-          <Button size="lg" variant="outline">
-            Read Whitepaper
-          </Button>
-        </div>
-      </section>
+            <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-xl">
+              A long-term Polygon project with real MATIC dividends.
+            </p>
 
-      {/* FEATURES */}
-      <section className="bg-muted/30 py-20">
-        <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
-          <Feature
-            title="Transparent Tokenomics"
-            description="Clear distribution, no hidden mechanics, and long-term aligned incentives."
-          />
-          <Feature
-            title="Security First"
-            description="Smart-contract focused design with audit-ready architecture."
-          />
-          <Feature
-            title="Built for Scale"
-            description="Designed to grow sustainably without sacrificing decentralization."
-          />
-        </div>
-      </section>
+            <div className="flex flex-wrap gap-4">
+              <Link href="/presale">
+                <Button
+                  size="lg"
+                  className="bg-yellow-500 text-black hover:bg-yellow-400"
+                >
+                  Join Presale
+                </Button>
+              </Link>
 
-      {/* TOKEN SECTION */}
-      <section className="container mx-auto px-6 py-20 text-center">
-        <h2 className="text-4xl font-bold mb-6">The Lubdan Token</h2>
-        <p className="text-lg max-w-3xl mx-auto text-muted-foreground mb-8">
-          Lubdan is more than a token — it represents access, participation,
-          and governance within the ecosystem.
-        </p>
+              <Link href="/buy">
+                <Button size="lg" variant="secondary">
+                  Buy with Card
+                </Button>
+              </Link>
 
-        <Button size="lg" variant="secondary">
-          View Tokenomics
-        </Button>
-      </section>
+              <Link href="/whitepaper">
+                <Button size="lg" variant="outline">
+                  Read Whitepaper
+                </Button>
+              </Link>
+            </div>
+          </div>
 
-      {/* FOOTER CTA */}
-      <section className="bg-primary text-primary-foreground py-20 text-center">
-        <h2 className="text-4xl font-bold mb-4">
-          Ready to be early?
-        </h2>
-        <p className="mb-8 text-lg">
-          Join the Lubdan ecosystem before public launch.
-        </p>
+          {/* Duende */}
+          <div className="flex justify-center">
+            <img
+              src="/images/IMG_2901.webp" // DUENDE REAL
+              alt="Lubdan mascot"
+              className="max-w-sm md:max-w-md drop-shadow-2xl"
+            />
+          </div>
+        </section>
 
-        <Button size="lg" variant="outline">
-          Enter the Ecosystem
-        </Button>
-      </section>
-    </div>
-  );
-}
+        {/* STATS */}
+        <section className="container mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <Stat title="Current Phase" value="Phase 1 — $0.20" />
+          <Stat title="LBD Sold" value="1,200,000" />
+          <Stat title="Phase 1 Remaining" value="5,100,000" />
+          <Stat title="Phase 2 Remaining" value="3,150,000" />
+        </section>
 
-function Feature({
-  title,
-  description,
-}: {
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="p-6">
-      <h3 className="text-2xl font-semibold mb-4">{title}</h3>
-      <p className="text-muted-foreground">{description}</p>
-    </div>
-  );
-}
+        {/* DIVIDENDS */}
+        <section className="container mx-auto px-6 py-20">
+          <div className="bg-black/60 border border-yellow-500/30 rounded-2xl p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <h2 className="text-3xl font-bold mb-2 text-yellow-400">
+                Earn MATIC Dividends
+              </h2>
+              <p className="text-muted-foreground max-w-xl">
+                Hold LBD and receive real Polygon dividends directly from the ecosystem.
+              </p>
+            </div>
+
+            <img
+              src="https://cryptologos.cc/logos/polygon-matic-logo.png"
+              alt="Polygon"
+              className="w-16 h-16"
+            />
+          </div>
+        </section>
+
+        {/* SUBSCRIBE */}
+        <section className="container mx-auto px-6 pb-24">
+          <div className="bg-black/60 border border-yellow-500/30 rounded-2xl p-10">
+            <h3 className="text-2xl font-bold mb-4 text-yellow-400">
+              Subscribe for Updates
+            </h3>
+
+            <div className="flex flex-col md:flex-row gap-4">
+              <
