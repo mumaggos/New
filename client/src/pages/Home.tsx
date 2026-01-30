@@ -6,7 +6,7 @@ export default function Home() {
     <div
       className="min-h-screen text-foreground"
       style={{
-        backgroundImage: "url(/images/IMG_2903.webp)", // FUNDO
+        backgroundImage: "url(/images/IMG_2903.webp)",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -87,4 +87,50 @@ export default function Home() {
               className="w-16 h-16"
             />
           </div>
-        </se
+        </section>
+
+        {/* SUBSCRIBE */}
+        <section className="container mx-auto px-6 pb-24">
+          <div className="bg-black/60 border border-yellow-500/30 rounded-2xl p-10">
+            <h3 className="text-2xl font-bold mb-4 text-yellow-400">
+              Subscribe for Updates
+            </h3>
+
+            <div className="flex flex-col md:flex-row gap-4">
+              <input
+                type="email"
+                placeholder="Enter your email…"
+                className="flex-1 rounded-lg bg-black border border-yellow-500/30 px-4 py-3 text-white"
+              />
+
+              <Button className="bg-green-600 hover:bg-green-500">
+                Subscribe →
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* FOOTER */}
+        <footer className="text-center pb-8 text-sm text-muted-foreground">
+          Support:{" "}
+          <a
+            href="mailto:lubdan.info@gmail.com"
+            className="text-yellow-400 hover:underline"
+          >
+            lubdan.info@gmail.com
+          </a>
+        </footer>
+
+      </div>
+    </div>
+  );
+}
+
+function Stat({ title, value }: { title: string; value: string }) {
+  return (
+    <div className="bg-black/60 border border-yellow-500/30 rounded-xl p-6">
+      <p className="text-sm text-muted-foreground mb-1">{title}</p>
+      <p className="text-2xl font-bold text-yellow-400">{value}</p>
+    </div>
+  );
+}
