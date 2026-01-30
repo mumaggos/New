@@ -6,18 +6,17 @@ export default function Home() {
     <div
       className="min-h-screen text-foreground"
       style={{
-        backgroundImage: "url(/images/IMG_2903.webp)", // FUNDO REAL
+        backgroundImage: "url(/images/IMG_2903.webp)", // FUNDO
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
     >
       {/* Overlay */}
-      <div className="min-h-screen bg-black/55 backdrop-blur-[1px]">
+      <div className="min-h-screen bg-black/55">
 
         {/* HERO */}
         <section className="container mx-auto px-6 py-20 grid md:grid-cols-2 gap-14 items-center">
-          
           {/* Texto */}
           <div>
             <h1 className="text-4xl md:text-6xl font-extrabold mb-6 text-yellow-400">
@@ -55,7 +54,7 @@ export default function Home() {
           {/* Duende */}
           <div className="flex justify-center">
             <img
-              src="/images/IMG_2901.webp" // DUENDE REAL
+              src="/images/IMG_2901.webp"
               alt="Lubdan mascot"
               className="max-w-sm md:max-w-md drop-shadow-2xl"
             />
@@ -88,14 +87,4 @@ export default function Home() {
               className="w-16 h-16"
             />
           </div>
-        </section>
-
-        {/* SUBSCRIBE */}
-        <section className="container mx-auto px-6 pb-24">
-          <div className="bg-black/60 border border-yellow-500/30 rounded-2xl p-10">
-            <h3 className="text-2xl font-bold mb-4 text-yellow-400">
-              Subscribe for Updates
-            </h3>
-
-            <div className="flex flex-col md:flex-row gap-4">
-              <
+        </se
